@@ -59,15 +59,25 @@ class StudentDB(object):
   self.db.update(student)
   self.updatedb()
 
- # get a student from the database
- def get(self, studentname):
+ # get a student dictionary from the database
+ # return the correct Student object
+ def getstudent(self, studentname):
   try:
-   return self.db[studentname]
+   # get the dictionary
+   studentdict = self.db[studentname]
+   # initialize Student with student name
+   thestudent = Student(studentname)
+   # add address to Student
+   thestudent.changeaddress(studentdict["address"])
+   # add parent(s) to Student
+   for p in studentdict["parents"]:
+    thestudent.addparent(p)
+   return thestudent
   except KeyError:
    print("The student {} does not exist".format(studentname))
    return False
   
- 
+  
 
 
 
