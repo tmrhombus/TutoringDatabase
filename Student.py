@@ -1,3 +1,5 @@
+#!/bin/python
+
 
 class Student:
 
@@ -13,4 +15,9 @@ class Student:
  def changeaddress(self, theaddress):
   self.address = theaddress
 
+ def storeinfo(self):
+  info = { self.name : {"parents": self.parents, 
+                        "address": self.address} 
+         }
+  return info
 
