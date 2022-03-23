@@ -54,10 +54,18 @@ class StudentDB(object):
   except:
    print("There was a problem with writing the database")
  
- # set a 
+ # set a student into database
  def set(self, student):
   self.db.update(student)
   self.updatedb()
+
+ # get a student from the database
+ def get(self, studentname):
+  try:
+   return self.db[studentname]
+  except KeyError:
+   print("The student {} does not exist".format(studentname))
+   return False
   
  
 
