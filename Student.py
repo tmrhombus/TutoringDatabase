@@ -7,6 +7,10 @@ class Student:
   self.parents = []
   self.address = ""
 
+ def addparent(self, parentname):
+  self.parents.append(parentname)
 
+ def changeaddress(self, theaddress):
+  self.address = theaddress
 
 
