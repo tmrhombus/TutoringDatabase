@@ -1,6 +1,9 @@
 #!/bin/python
 
-# class for datatype with multiple attributes
+# class for Student datatype with attributes
+ # name: string
+ # parent's names: list of strings
+ # address: string
 class Student:
 
  # Constructor - student has a name
@@ -8,6 +11,7 @@ class Student:
   self.name = name
   self.parents = []
   self.address = ""
+  #self.events = 
 
  def addparent(self, parentname):
   self.parents.append(parentname)
