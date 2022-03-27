@@ -58,6 +58,12 @@ class Student:
    print("  Paid:   {}".format(self.events[date]["paid"]))
    print("")
   
+ def oweshowmuch(self):
+  owes = 0 
+  for date in self.events.keys():
+   if self.events[date]["paid"] is False:
+    owes += self.events[date]["price"]
+  print("They owe:  {}".format(owes))
 
  # store it as a nested dictionary for database
  def storeinfo(self):
