@@ -46,12 +46,14 @@ class Student:
   self.address = theaddress
 
  def addevent(self, date="", price=0, paid=False):
-  self.events[date : {"price" : price, "paid" : paid}]
+  self.events[date] = {"price" : price, "paid" : paid}
 
  # store it as a nested dictionary for database
  def storeinfo(self):
   info = { self.name : {"parents": self.parents, 
-                        "address": self.address} 
+                        "address": self.address,
+                        "events": self.events
+                       } 
          }
   return info
 
@@ -105,6 +107,8 @@ class StudentDB(object):
    # add parent(s) to Student
    for p in studentdict["parents"]:
     thestudent.addparent(p)
+   # add events to student
+   thestudent.events = studentdict["events"]
    return thestudent
   except KeyError:
    print("The student {} does not exist".format(studentname))
