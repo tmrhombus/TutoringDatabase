@@ -48,6 +48,9 @@ class Student:
  def addevent(self, date="", price=0, paid=False):
   self.events[date] = {"price" : price, "paid" : paid}
 
+ def paidevent(self, date=""):
+  self.events[date]["paid"] = True
+
  # store it as a nested dictionary for database
  def storeinfo(self):
   info = { self.name : {"parents": self.parents, 
