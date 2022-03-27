@@ -51,6 +51,14 @@ class Student:
  def paidevent(self, date=""):
   self.events[date]["paid"] = True
 
+ def listallevents(self):
+  for date in self.events.keys():
+   print("Date:     {}".format(date))
+   print("  Price:  {}".format(self.events[date]["price"]))
+   print("  Paid:   {}".format(self.events[date]["paid"]))
+   print("")
+  
+
  # store it as a nested dictionary for database
  def storeinfo(self):
   info = { self.name : {"parents": self.parents, 
