@@ -26,6 +26,7 @@ class Student:
   self.events[date]["paid"] = True
 
  def listallevents(self):
+  print("\nList of Tutoring Events for {}:\n".format(self.name))
   for date in self.events.keys():
    print("Date:     {}".format(date))
    print("  Price:  {}".format(self.events[date]["price"]))
@@ -37,7 +38,7 @@ class Student:
   for date in self.events.keys():
    if self.events[date]["paid"] is False:
     owes += self.events[date]["price"]
-  print("They owe:  {}".format(owes))
+  print("{} owes:  {}".format(self.name, owes))
 
  # store it as a nested dictionary for database
  def storeinfo(self):
@@ -106,9 +107,11 @@ class StudentDB(object):
    return False
 
  def liststudents(self):
+  print("")
   print("List of all students:")
   for key in self.db.keys():
    print("  {}".format(key))
+  print("")
   
   
 
