@@ -11,14 +11,20 @@ class Event:
   self.price = 0
   self.paid  = False
 
- def setdate(thedate):
+ def setdate(self, thedate):
   self.date = thedate
 
- def setprice(price):
+ def setprice(self, price):
   self.price = price
 
- def setpaid(didpay):
+ def setpaid(self, didpay):
   self.paid = didpay
+
+ def storeevent(self):
+  event = { self.date : {"price": self.price,
+                         "paid":  self.paid}
+          }
+  return event
 
 # class for Student datatype with attributes
  # name: string
