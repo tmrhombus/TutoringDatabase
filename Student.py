@@ -37,13 +37,16 @@ class Student:
   self.name = name
   self.parents = []
   self.address = ""
-  #self.events = 
+  self.events = {}
 
  def addparent(self, parentname):
   self.parents.append(parentname)
 
  def changeaddress(self, theaddress):
   self.address = theaddress
+
+ def addevent(self, date="", price=0, paid=False):
+  self.events[date : {"price" : price, "paid" : paid}]
 
  # store it as a nested dictionary for database
  def storeinfo(self):
