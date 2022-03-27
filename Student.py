@@ -4,6 +4,7 @@
  # name: string
  # parent's names: list of strings
  # address: string
+ # events: dictionary with dates, cost, have they paid
 class Student:
 
  # Constructor - student has a name
