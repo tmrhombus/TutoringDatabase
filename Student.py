@@ -1,31 +1,5 @@
 #!/bin/python
 
-# class for Event datatype with attribuetes:
- # date: string
- # price: int
- # paid: bool
-class Event:
-
- def __init__(self):
-  self.date  = ""
-  self.price = 0
-  self.paid  = False
-
- def setdate(self, thedate):
-  self.date = thedate
-
- def setprice(self, price):
-  self.price = price
-
- def setpaid(self, didpay):
-  self.paid = didpay
-
- def storeevent(self):
-  event = { self.date : {"price": self.price,
-                         "paid":  self.paid}
-          }
-  return event
-
 # class for Student datatype with attributes
  # name: string
  # parent's names: list of strings
