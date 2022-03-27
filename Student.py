@@ -104,6 +104,11 @@ class StudentDB(object):
   except KeyError:
    print("The student {} does not exist".format(studentname))
    return False
+
+ def liststudents(self):
+  print("List of all students:")
+  for key in self.db.keys():
+   print("  {}".format(key))
   
   
 
