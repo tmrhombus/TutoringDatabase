@@ -10,7 +10,6 @@ theDB.liststudents()
 # >>   Alice
 # >>   Bob
 
-
 # Some examples of things we can do with students
 # First we need to get the student from the DB
 alice = theDB.getstudent("Alice")

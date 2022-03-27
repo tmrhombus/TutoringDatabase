@@ -1,7 +1,6 @@
 import Student as st
 
-
-# Define two students
+# Define two students using Student class
 alice = st.Student("Alice")
 bob   = st.Student("Bob")
 
@@ -16,12 +15,9 @@ bob.addparent("Wendy")
 alice.changeaddress("123 Disneyland Drive")
 bob.changeaddress("456 Christmas Tree Lane")
 
-
 # Enter students into database
 # Since database doesn't yet exist, create it first
-
 db_location="./mystudents.db"
-
 theDB = st.StudentDB(db_location)
 
 # Add students to database
